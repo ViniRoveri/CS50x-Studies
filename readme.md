@@ -26,6 +26,28 @@
 
    - When using If Statements it's better to invert the boolean when necessary so you don't ident the main code of the program.
 
-   - Numbers use 64 bits to represent a value, making it simple it's 32 for positive values and 32 for negative values, this ranges from roughly positive to negative 2 billion
+   - Numbers use 32 bits to represent a value, making it simple it's 16 for positive values and 16 for negative values, this ranges from roughly positive to negative 2 billion.
 
-   - Integer overflow happens when those 32 bits aren't enough to represent a value.
+   - Integer overflow happens when those 16 bits aren't enough to represent a value.
+
+<br/>
+
+## Week 2
+
+   - The steps of compiling are: Pre-processing, Compiling, Assembling and Linking.
+
+   - Pre-processing is when the program converts the libraries imports to all its functions' declarations.
+
+   - Compiling is the step when the written code is converted to Assembly code.
+
+   - Assembly code is a closer representation to what computers understand, and include mostly arithmetic operations.
+
+   - Assembling is the step in which all that Assembly code is converted to binary.
+
+   - Linking is the process of bringing together the code written by the programmer and all the imported libraries' code.
+
+   - Arrays are a way to store data back-to-back on memory.
+
+   - Strings always take 1 more byte than necessary to store a "NUL" character, which indicates the end of one.
+
+   - It's good design to not call functions repeatedly if their results are gonna be the same.
