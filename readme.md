@@ -2,6 +2,14 @@
 
 <br/>
 
+## Index:
+   
+   - ### [Week 0](#week-0-1)
+   - ### [Week 1](#week-1-1)
+   - ### [Week 2](#week-2-1)
+
+<br/>
+
 ## Week 0
 
    - Computers use bits to represent data due to it being simple to represent with the transistors and easy to have a lot of data with smaller effort.
@@ -51,3 +59,9 @@
    - Strings always take 1 more byte than necessary to store a "NUL" character, which indicates the end of one.
 
    - It's good design to not call functions repeatedly if their results are gonna be the same.
+
+<br/>
+
+## Week 3
+
+   -
