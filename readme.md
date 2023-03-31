@@ -8,6 +8,7 @@
    - ### [Week 1 - C](#week-1---c-1)
    - ### [Week 2 - Arrays](#week-2---arrays-1)
    - ### [Week 3 - Algorithms](#week-3---algorithms-1)
+   - ### [Week 4 - Memory](#week-4---memory-1)
 
 <br/>
 
@@ -88,3 +89,55 @@
    - The stop condition on a recursive function is called "Base Case", and as the name suggests, is a condition when the function don't need to be executed, breking the cycle.
 
    - Overall, a recursive function works to break a big problem into smaller, repetitive problems.
+
+   <br/>
+
+## Week 4 - Memory
+
+   - Hexadecimal means a number representation of base 16.
+
+   - In hexadecimal the numbers 10-15 are represented by the letters A-F case-insensitively.
+
+   - The reason why hexadecimal gets use is because it's a way to represent the value of 4 bits more succinctly, even though the computer still reads it as binary.
+
+   - The way the memory knows if a number is represented in hexadecimal is through the "0x" prefix.
+
+   - The adresses of bytes in memory are called "Pointers" and are written in hexadecimal.
+
+   - Segmentation Fault is the error when the code try to access to read or write a place in memory outside of the application.
+
+   - In C you can access the adress of a variable n through &n, and store this adress value in a variable of p naming it *p on declaration.
+
+   - In this example if you print p you're gonna get the adress, but if you print *p you get the value itself stored at that adress.
+
+   - The type of the pointer on declaration is the type of the value in the adress it points to.
+
+   - Pointers are 8-bytes long, because they need a lot of space to get the value of remote places of memory.
+
+   - When you store a string in a variable this variable becomes a character pointer that points to the first character of the string.
+
+   - Heap is the name of the free space the application is allowed to use. Stack is the name of the part in memory where functions are executed.
+
+   - The Heap and the Stack grow in opposite directions, using memory face-to-face, so if one gets too large the other can't work.
+
+   - Heap overflow is when you allocate too much memory in an application, and stack overflow is when you run too many functions in an application.
+
+   - Buffer overflow is a more general way to talk about memory overflows.
+
+   - The malloc function allocates memory in sequence from the heap.
+
+   - Everytime you use malloc you have to free its pointer in the end of its use so unused the memory can be allocated freely afterwards.
+
+   - Everytime you open a file with fopen you have to close its pointer with fclose after you read or write it.
+
+   - The programmer have to always be aware of how much memory is allocated and how much is used so the program don't use more memory than it allocated.
+
+   - If malloc can't give you any memory, it will return NULL.
+
+   - Signed integers can be both positive or negative, and unsigned integers can be only positive.
+
+   - the HD or SSD is the place where all computer memory lives, and the RAM is where the currently used memory is.
+
+   - If you don't know exactly where the pointer is pointing to, you should set it to NULL so it doesn't cause a segmentation fault.
+
+   - 64-bits computer means the adresses of memory are 64 bits long, and the logic is the same for 32-bits computers.
