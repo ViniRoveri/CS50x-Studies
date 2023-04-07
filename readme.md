@@ -9,6 +9,7 @@
    - ### [Week 2 - Arrays](#week-2---arrays-1)
    - ### [Week 3 - Algorithms](#week-3---algorithms-1)
    - ### [Week 4 - Memory](#week-4---memory-1)
+   - ### [Week 5 - Data Structures](#week-5---data-structures-1)
 
 <br/>
 
@@ -72,6 +73,8 @@
 
    - For sorting, with 'n' representing the Number of Steps: O(n) represents the worst-case scenario for a search, Omega(n) represents the best-case scenario. Theta(n) is when the best and worst cases are the same.
 
+   - O(1) doesn't necessarily means 1 step, but any constant and finite value.
+
    - Selection Sort will compare the current item with every one of the remaining and swap it to the correct position.
 
    - Bubble Sort will compare the current item with the next one and sort them, then it will do the same now with the next item and so on until the end. 
@@ -90,7 +93,7 @@
 
    - Overall, a recursive function works to break a big problem into smaller, repetitive problems.
 
-   <br/>
+<br/>
 
 ## Week 4 - Memory
 
@@ -116,6 +119,8 @@
 
    - When you store a string in a variable this variable becomes a character pointer that points to the first character of the string.
 
+   - The 0x0 adress is always gonna represent NULL.
+
    - Heap is the name of the free space the application is allowed to use. Stack is the name of the part in memory where functions are executed.
 
    - The Heap and the Stack grow in opposite directions, using memory face-to-face, so if one gets too large the other can't work.
@@ -138,6 +143,82 @@
 
    - the HD or SSD is the place where all computer memory lives, and the RAM is where the currently used memory is.
 
-   - If you don't know exactly where the pointer is pointing to, you should set it to NULL so it doesn't cause a segmentation fault.
+   - Garbage values exist when you don't set any value to the memory you allocated.
+
+   - If you don't know exactly where the pointer is pointing to, you should set it to NULL so it doesn't cause a segmentation fault nor get a garbage value.
 
    - 64-bits computer means the adresses of memory are 64 bits long, and the logic is the same for 32-bits computers.
+
+<br/>
+
+## Week 5 - Data Structures
+
+   - Queue is a data structure with First-In First-Out, so it always makes sure to see every items on the line in order.
+
+   - Stack is a data structure with Last-In First-Out, so the items placed first (thinking literally, in the bottom) almost never get to be seen.
+
+   - The realloc function is an efficient and automatic way to reallocate more or less memory for a pointer.
+
+   - A linked list consists of items that made of a struct its value and a pointer to the next list item.
+
+   - The linked list last item's should point to 0x0, or literally, NULL.
+
+   - You can use a type inside its own declaration by using typedef struct name, and inside the struct reference it as struct name.
+
+   - The downsides to a linked list is that first you use more memory space, and mainly you can't take elements by index.
+
+   - When you want to access a value of a key inside a struct through this struct's pointer you can use the syntax pointer->key.
+
+   - Addidng items to the start of a linked list is the most efficient way, because you don't have to go through every item every time you add one.
+
+   - A binary search tree (BST for short) is a way to allow you to use binary search on linked lists.
+
+   - The BST must be sorted so the search work.
+
+   - The BST's nodes have 2 pointers, one to the item on the left, aka the smaller one, and one to the value on the right, aka the bigger one.
+
+   - The most efficient and elegant way to do a binary search is via recursion.
+
+   - Balancing a BST means repivoting the root to be the actual center value of the list.
+
+   - The normal height of a BST is most likely gonna be O(n log n), but if you don't balance it can become as long as O(n).
+
+   - A hash table is an array with pointers that lead to imaginary buckets that contain the content you wanna find.
+
+   - The values used to determine what go in these buckets are called hash values, and that of an item match that of the bucket it's in.
+
+   - The hash value of an item is determined by a characteristic it has in common with the context that can also be compared, for example the first letter of names that can be put in alphabetical order.
+
+   - The function that tells the hash value of an item is called a hash function.
+
+   - A hash table is a way to get the data search to O(1), it tries that by letting you jump to a specific index and get the content you want.
+
+   - The downside to a hash table is that you can't free unused array space because the indexes would mess up and make you lose this immediacy.
+
+   - In practical terms, the actual time a hash table search is gonna take is O(n/k) with k being the number of buckets there are contents in.
+
+   - The best way to optimize a hash table search is doing an uniform distribuction across all buckets, so the k in the O(n/k) mentioned above can be bigger and therefore give you a smaller runtime.
+
+   - So a hash table can store multiple items in the same index it's common to create a linked list at that index with all its items.
+
+   - Tries are the way to achieve O(1), it does so by covering all possibilities of hash values combinations there are.
+
+   - The runtime of tries is always gonna be the length of the given key.
+
+   - Tries almost never get used because you waste much more memory than the other options, just by trying to cover all those possibilities.
+
+   - Most of the time it's good practice to use an extra pointer pointing to the start of the data structure due to null checks and maintenance.
+
+   - When freeing the memory of a linked list you have to free all of its nodes.
+
+   - A singly-linked list's node have one pointer that only points to the next node. A doubly-linked list's node have two pointers, one pointing to the previous, and one pointing to the next node.
+
+   - Doubly-linked lists are larger than singly-linked ones, so you only want to use when you're gonna need to delete single elements from the list.
+
+   - A queue struct when using an array will have the array of items, the start index of the array, and the array size.
+   
+   - When using a linked list as a queue you will have a standard doubly-linked list in addition to a global pointer to the head of the list and one to the tail of it.
+
+   - A stack struct when using an array will have the array of items and the index of the last added item.
+
+   - A linked list based stack will be a stardard singly-linked list, but with the limitation of you only being able to add or remove the first item of the list, and you will also wanna have a global pointer to the start of the list.
