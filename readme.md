@@ -222,3 +222,5 @@
    - A stack struct when using an array will have the array of items and the index of the last added item.
 
    - A linked list based stack will be a stardard singly-linked list, but with the limitation of you only being able to add or remove the first item of the list, and you will also wanna have a global pointer to the start of the list.
+
+<br/>
