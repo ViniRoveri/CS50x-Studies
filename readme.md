@@ -10,6 +10,7 @@
    - ### [Week 3 - Algorithms](#week-3---algorithms-1)
    - ### [Week 4 - Memory](#week-4---memory-1)
    - ### [Week 5 - Data Structures](#week-5---data-structures-1)
+   - ### [Week 6 - Python](#week-6---python-1)
 
 <br/>
 
@@ -40,6 +41,10 @@
    - Numbers use 32 bits to represent a value, making it simple it's 16 for positive values and 16 for negative values, this ranges from roughly positive to negative 2 billion.
 
    - Integer overflow happens when those 16 bits aren't enough to represent a value.
+
+   - Floating point imprecision happens when the computer tries to approximate a periodic decimal, as it don't have enough available bits to store it.
+
+   - Floating points data types shouldn't be used to store currency, due to the floating point imprecision.
 
 <br/>
 
@@ -224,3 +229,15 @@
    - A linked list based stack will be a stardard singly-linked list, but with the limitation of you only being able to add or remove the first item of the list, and you will also wanna have a global pointer to the start of the list.
 
 <br/>
+
+## Week 6 - Python
+
+   - Higher-level languages like Python and JavaScript were created ultimately so developers can save more time and effort.
+
+   - They save time because you can express the same ideas and concepts, but much more succinctly by writing less code thanks to the language's syntax.
+
+   - They save effort because the developer don't have to worry about all the low-level decisions, as they were already made by who created the language.
+
+   - Higher-level languages tend to be very slightly slower than low-level ones because they come with a lot of automatic memory management and built-in functions. But this is countered by the quality of life you get by using them to develop, as all that stuff already in the background is there so that you don't have to worry about creating it.
+
+   - Higher-level languages may or may not solve the problems of integer overflow and floating point imprecision, depending on which one you choose.
