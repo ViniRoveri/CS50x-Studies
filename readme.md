@@ -11,6 +11,7 @@
    - ### [Week 4 - Memory](#week-4---memory-1)
    - ### [Week 5 - Data Structures](#week-5---data-structures-1)
    - ### [Week 6 - Python](#week-6---python-1)
+   - ### [Week 7 - SQL](#week-7---sql-1)
 
 <br/>
 
@@ -241,3 +242,59 @@
    - Higher-level languages tend to be very slightly slower than low-level ones because they come with a lot of automatic memory management and built-in functions. But this is countered by the quality of life you get by using them to develop, as all that stuff already in the background is there so that you don't have to worry about creating it.
 
    - Higher-level languages may or may not solve the problems of integer overflow and floating point imprecision, depending on which one you choose.
+
+<br/>
+
+## Week 7 - SQL
+
+   - The simplest style of database is called Flat-File Database, and can be represented by a .csv file.
+
+   - To work with .csv files in Python, the csv library is necessary.
+
+   - The csv library contains two functions that returns an array of rows, with .reader each row is an string array, and with .DictReader each row is an object (or dictionary).
+
+   - Relational databases are the most used and generally the best choice for large amounts of data.
+
+   - SQL is the language used to create, read, update and delete data on relational databases.
+
+   - It's usually good practice to write SQL commands in all uppercases.
+
+   - The * character in a querys represents 'Everything'.
+
+   - To create a table: CREATE TABLE IF NOT EXIST "TableName"("FirstColumn" DATATYPE, "SecondColumn" DATATYPE).
+   
+   - When creating a table, after the DATATYPE you can use NOT NULL to make it non nullabe, and/or UNIQUE to make it unique across all rows.
+
+   - To say that a column is a primary or a foreign key in the table creation: PRIMARY KEY(IdColumnName) or FOREIGN KEY(ReferencedColumnName) REFERENCES ReferencedTableName(ReferencedColumnName). That must be included as if new columns.
+
+   - To insert data into a table: INSERT INTO TableName (FirstColumn, SecondColumn) VALUES(FirstValue, SecondValue).
+
+   - To read columns of a table: SELECT ColumnName FROM TableName.
+
+   - To join and read two tables that have a foreign key connecting them: SELECT * FROM FirstTable JOIN SecondTable ON FirstTable.CommonColumn = SecondTable.CommonColumn.
+
+   - You can join as much tables as you want with multiple JOIN predicates.
+
+   - To update data of a table: UPDATE TableName SET ColumnName = NewValue WHERE Condition.
+
+   - To delete rows from a table: DELETE FROM TableName WHERE Condition.
+
+   - To delete a table: DROP TABLE TableName.
+
+   - If you don't use the WHERE predicate when updating or deleting in a table, it's gonna update or delete everything from that table.
+
+   - You can use LIMIT GivenNumber after the SQL query to limit the number of results.
+
+   - Instead of the equals sign, you can use LIKE to get a more flexible condition on the WHERE predicate.
+
+   - The % character inside a string represents 'Something', and is used alongside the LIKE predicate.
+
+   - If you are gonna search in a specific column very often, you can create an index on it to optimize the searches.
+
+   - To create an index: CREATE INDEX IndexName ON TableName (ColumnName).
+
+   - The tradeoff for using indexes is that they take a large amount of storage.
+
+   - Race Condition is when a source tries to access data from a database while this data is in the process of changing, causing that source to recieve wrong data.
+
+   - To prevent Race Conditions from happening you can use BEGIN TRANSACTION on the start of the SQL query, and COMMIT on the end of it.
