@@ -249,9 +249,7 @@
 
    - The simplest style of database is called Flat-File Database, and can be represented by a .csv file.
 
-   - To work with .csv files in Python, the csv library is necessary.
-
-   - The csv library contains two functions that returns an array of rows, with .reader each row is an string array, and with .DictReader each row is an object (or dictionary).
+   - The python's csv library contains two functions that returns an array of rows, with .reader each row is an string array, and with .DictReader each row is an object (or dictionary).
 
    - Relational databases are the most used and generally the best choice for large amounts of data.
 
