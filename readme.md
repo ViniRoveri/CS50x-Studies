@@ -267,11 +267,13 @@
 
    - To insert data into a table: INSERT INTO TableName (FirstColumn, SecondColumn) VALUES(FirstValue, SecondValue).
 
-   - To read columns of a table: SELECT ColumnName FROM TableName.
+   - To read columns of a table: SELECT ColumnName, ColumnName2 FROM TableName.
 
    - To join and read two tables that have a foreign key connecting them: SELECT * FROM FirstTable JOIN SecondTable ON FirstTable.CommonColumn = SecondTable.CommonColumn.
 
    - You can join as much tables as you want with multiple JOIN predicates.
+
+   - To order a selection, add on the end of the query: ORDER BY ColumnName1, ColumnName2.
 
    - To update data of a table: UPDATE TableName SET ColumnName = NewValue WHERE Condition.
 
