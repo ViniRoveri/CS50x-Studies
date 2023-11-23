@@ -289,6 +289,14 @@
 
    - The % character inside a string represents 'Something', and is used alongside the LIKE predicate.
 
+   - To get the sum of all values of a column you can use SELECT SUM(ColumnName) FROM TableName, and to get the average use the AVG(columnName) method instead.
+
+   - To get the number of rows that match a condition you can use SELECT COUNT(ColumnName) FROM TableName WHERE Condition.
+
+   - Null values are not counted by the COUNT() method, but they will be if you use Count(*).
+
+   - If you use SELECT DISTINCT... you'll not query duplicate values.
+
    - If you are gonna search in a specific column very often, you can create an index on it to optimize the searches.
 
    - To create an index: CREATE INDEX IndexName ON TableName (ColumnName).
